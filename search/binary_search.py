@@ -14,8 +14,4 @@ def binary_search_recursive(array, target, left, right):
             return binary_search_recursive(array, target, left, mid - 1)
         else:
             return binary_search_recursive(array, target, mid + 1, right)
-
-
-numbers = [i for i in range(1, 10)]
-
-print(binary_search(numbers, 9))
+        
