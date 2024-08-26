@@ -2,6 +2,7 @@ from datetime import datetime
 import random
 from search.binary_search import binary_search
 from sort.merge_sort import merge_sort
+from sort.quick_sort import quick_sort
 
 def execute_sort(func, arr):
     start = datetime.now()
@@ -20,10 +21,13 @@ def execute_search(func, arr, target):
     return result
 
 
-max = 100
+max = 1000
 sorted_numbers = [i for i in range(1, max)]
 random_numbers = [random.randint(1, max) for i in range(1, max)]
 random_number = random.randint(1, max)
 
 execute_sort(merge_sort, random_numbers)
+
+execute_sort(quick_sort, random_numbers)
+
 execute_search(binary_search, sorted_numbers, random_number)
